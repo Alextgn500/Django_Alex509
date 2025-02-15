@@ -1,0 +1,10 @@
+django
+asgiref
+asgiref-3.8.1.dist-info
+django-5.1.6.dist-info
+pip
+pip-25.0.1.dist-info
+sqlparse
+sqlparse-0.5.3.dist-info
+tzdata
+tzdata-2025.1.dist-info
