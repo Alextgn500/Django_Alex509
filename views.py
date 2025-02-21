@@ -1,12 +1,21 @@
-from django.views import View
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
-    return render(request, 'second_task/func_template.html')
 
-class ClassTemplateView(View):
-    def get(self, request):
-        return render(request, 'second_task/class_template.html')
+def home(request):
+    return render(request, 'third_task/home.html')
+
+def products(request):
+    games = {
+        'Atomic Heart': 'Купить',
+        'CyberPunk 2077': 'Купить',
+        'PayDay 2': 'Купить',
+    }
+    return render(request, 'third_task/products.html', {'games': games})
+
+def basket(request):
+    return render(request, 'third_task/basket.html')
+
+
 
 
