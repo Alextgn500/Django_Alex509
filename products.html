@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em; /* Заголовок подстраницы */
+        }
+        ul {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 0;
+        }
+        li {
+            margin: 20px 0; /* Отступы между пунктами списка */
+        }
+        button {
+            margin-left: 10px; /* Отступ между текстом и кнопкой */
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ИГРЫ</h1>
+
+    <ul>
+        {% for game, button_text in games.items %}
+        <li>
+            {{ game }} <button>{{ button_text }}</button> <!-- Кнопка без функционала -->
+        </li>
+        {% endfor %}
+    </ul>
+
+    <button onclick="window.location.href='/'">Вернуться обратно</button> <!-- Кнопка для возврата на главную страницу -->
+
+</body>
+</html>
